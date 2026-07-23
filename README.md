@@ -1,14 +1,31 @@
 # 📺 OTT-Subscriber-Churn-Analysis
 
-![Python](https://img.shields.io/badge/Python-3.x-blue)
-![Pandas](https://img.shields.io/badge/Pandas-2.x-green)
-![SQLite](https://img.shields.io/badge/SQLite-3.x-orange)
+### Identifying High-Risk Subscribers & Building Retention Strategies
+
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-2.x-150458?style=flat&logo=pandas&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-3.x-003B57?style=flat&logo=sqlite&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=flat&logo=jupyter&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557C?style=flat)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
+![Type](https://img.shields.io/badge/Type-Portfolio%20Project-E94560?style=flat)
 
-##  About the Project
-In the hyper-competitive OTT (Over-The-Top) streaming industry (similar to Netflix, Hotstar, Prime), customer retention is the ultimate metric for sustainable growth. This project focuses on identifying high-risk subscribers by analyzing a multi-dimensional dataset. 
+---
 
-By integrating raw database tables (Customer Demographics, Subscription Details, and Support Escalations), this project uncovers behavioral patterns that lead to churn. The analytical framework used here is highly scalable and applicable to other subscription-based industries like **E-commerce, SaaS, Fintech, and Adtech**.
+## 📌 Project Overview
+
+
+In the hyper-competitive OTT streaming industry (Netflix, Hotstar, Amazon Prime),
+**subscriber retention is the #1 business priority.**
+Acquiring a new customer costs **5-7x more** than retaining an existing one,
+yet most platforms struggle to identify *who* is about to leave — and *why*.
+
+This project simulates a **real-world Data Analyst role** at an OTT company.
+Using a multi-dimensional subscriber dataset (demographics, subscription behavior,
+and support interactions), I built a complete **end-to-end data analytics pipeline**
+that identifies high-risk churn segments and delivers actionable retention strategies.
+
+ > 💼 **This project is directly applicable to:** OTT · SaaS · Fintech · Telecom · E-Commerce · AdTech
 
 ## Library Requirements
 
@@ -20,28 +37,28 @@ By integrating raw database tables (Customer Demographics, Subscription Details,
 
 ---
 
-## 🎯 Business Problem
+## 🎯 Business Questions Answered
 
-In the hyper-competitive OTT industry (Netflix, Hotstar, 
-Amazon Prime), subscriber retention is the #1 priority. 
-This project analyzes a multi-dimensional subscriber dataset 
-to identify high-risk churn segments and deliver actionable 
-retention recommendations.
+| # | Business Question | Finding |
+|---|---|---|
+| 1 | What is the overall churn rate? | **28.6%** — 4x above industry benchmark |
+| 2 | Which plan type churns most? | **Basic Plan** — highest churn rate |
+| 3 | Does contract type affect churn? | **Monthly contracts** churn significantly more than Annual |
+| 4 | Do complaints predict churn? | **Yes — very strongly correlated** |
+| 5 | Which age group is at risk? | **Age 41-50** — highest risk group |
+| 6 | Why do customers leave? | **Competitor switch, Price, Content gaps** |
 
-**Key Business Questions Answered:**
-- Which customer segments have the highest churn rate?
-- Does subscription plan affect churn probability?
-- Do support complaints correlate with churn?
-- What is the revenue impact of churn?
-- Why are customers cancelling their subscriptions?
 
 ---
 
-## 📊 Key Findings
+## 📊 Key Metrics & Findings
 
 | Metric | Value |
 |--------|-------|
-| Overall Churn Rate | 28.6% |
+| Total Customers | 21 |
+| Overall Churn Rate | 28.6% (Benchmark: 5-7%) |
+| Churned Customers | 6 |
+| Active Customers | 15 |
 | Monthly Revenue Lost | ₹73.94 |
 | Avg Customer Tenure | 56.3 months |
 | Highest Risk Segment | Basic Plan + Monthly Contract |
@@ -52,64 +69,15 @@ retention recommendations.
 - **Age 41-50** group → High risk group
 - **Customers who complained** → Alarming churn rate
 
+
 ### 📉 Why Customers Left
-1. Switched to Competitor (most common)
-2. Too Expensive
-3. Not Enough Content
-4. Poor Streaming Quality
-5. Forgot to Cancel Trial
-
----
-
-## 🛠️ Tech Stack
-
-| Tool | Purpose |
-|------|---------|
-| Python 3.x | Core programming |
-| Pandas | Data manipulation |
-| NumPy | Numerical computing |
-| SQLite3 | Database management |
-| Matplotlib | Visualizations |
-| Seaborn | Statistical charts |
-| Jupyter Notebook | Development environment |
-
----
-
-## 📁 Project Structure
-
-```text
-ott-subscriber-churn-analysis/
-├── 01_Data/
-│   ├── customer_churn_data_raw.xlsx
-│   ├── master_churn_data.csv 
-│   └── problem_statement.docx
-├── 02_Database/
-│   ├── customer_churn.db
-│   └── customer_churn_clean.db
-├── 03_Notebooks/
-│   ├── phase1_data_pipeline_ETL.ipynb
-│   └── phase2_eda_visualization.ipynb
-├── 04_Output/
-│   └── [all charts .png]
-└── README.md
-```
-
-
----
-
-## 🔄 Project Pipeline
-
-```text
-Excel Raw Data
-↓
-Python Pipeline (Phase 1)
-↓
-SQLite Database
-↓
-EDA & Visualization (Phase 2)
-↓
-Business Insights & Recommendations
-```
+| Reason | Share |
+|---|---|
+| Switched to Competitor | 33.3% |
+| Too Expensive | 16.7% |
+| Not Enough Content | 16.7% |
+| Poor Streaming Quality | 16.7% |
+| Forgot to Cancel Trial | 16.7% |
 
 ---
 
@@ -121,6 +89,12 @@ Business Insights & Recommendations
 ### Plan Type Analysis
 ![Plan](https://github.com/girishpathakk/OTT-Subscriber-Churn-Analysis/blob/main/04_Output/chart2_plan_churn.png)
 
+### Support Complaints & Churn Score
+![Complaint Churn](https://github.com/girishpathakk/OTT-Subscriber-Churn-Analysis/blob/main/04_Output/chart4_complaint_churnscore.png)
+
+### Age Group vs Churn
+![Age Churn](https://github.com/girishpathakk/OTT-Subscriber-Churn-Analysis/blob/main/04_Output/chart5_age_churn.png)
+
 ### Cancellation Reason
 ![Reason](https://github.com/girishpathakk/OTT-Subscriber-Churn-Analysis/blob/main/04_Output/chart6_cancellation_reasons.png)
 
@@ -129,35 +103,170 @@ Business Insights & Recommendations
 
 ---
 
-## 💡 Business Recommendations
+## 📂 Project Structure
 
-1. **Convert Monthly → Annual**
-   Offer 2 months free on annual upgrade
-
-2. **Basic Plan Retention**
-   Trial premium upgrade for basic subscribers
-
-3. **Post-Complaint Follow-up**
-   Contact within 24hrs of any complaint
-
-4. **Age 41-50 Targeting**
-   Family plan + premium content offers
-
-5. **Price-Sensitive Customers**
-   Loyalty discount program
-
+```text
+OTT-Subscriber-Churn-Analysis/
+│
+├── 📁 01_Data/
+│   ├── 📄 customer_churn_data_raw.xlsx
+│   ├── 📄 master_churn_data.csv
+│   └── 📄 problem_statement.docx
+│
+├── 📁 02_Database/
+│   ├── 🗄️ customer_churn.db
+│   └── 🗄️ customer_churn_clean.db
+│
+├── 📁 03_Notebook/
+│   ├── 📓 phase1_data_pipeline_ETL.ipynb
+│   └── 📓 phase2_eda_visualization.ipynb
+│
+├── 📁 04_Output/
+│   ├── 📊 all_charts.png
+│   ├── 📊 dashboard.png
+│
+└── 📄 README.md
+```
 
 
 ---
 
+
+## 🔄 Project Workflow
+
+```mermaid
+flowchart TD
+
+A["Raw Excel Data (.xlsx)"]
+
+subgraph P1["PHASE 1: Data Pipeline (Python/Pandas)"]
+B["Load 3 Excel Sheets"]
+C["Clean Data"]
+D["Engineer 8 Features"]
+E["Build SQLite Database"]
+F["Export Clean CSV"]
+
+B --> C
+C --> D
+D --> E
+E --> F
+end
+
+subgraph P2["PHASE 2: EDA & Visualization"]
+G["Load Data from SQLite"]
+H["Answer 6 Business Questions"]
+I["Create 6 Charts + 1 Dashboard"]
+J["Write Executive Insights"]
+K["Business Insights & Retention Recommendations"]
+
+G --> H
+H --> I
+I --> J
+J --> K
+end
+
+A --> B
+F --> G
+```
+
+---
+## ⚙️ Feature Engineering
+
+8 new business-relevant features were created from raw data:
+| Feature | Source | Business Use |
+|---|---|---|
+| `age` | Calculated from `dob` | Age-based churn segmentation |
+| `churn_flag` | From `cancellation_date` | **Target variable** (1=Churned, 0=Active) |
+| `tenure_months` | From `subscription_start_date` | Loyalty measurement |
+| `revenue_lost` | `churn_flag × monthly_charges` | Revenue impact KPI |
+| `total_complaints` | Aggregated from support table | Support behavior signal |
+| `has_escalation` | Max of escalations per customer | Escalation risk signal |
+| `avg_csat` | Mean CSAT per customer | Satisfaction score |
+| `has_complaint` | Binary from `total_complaints` | Quick churn risk flag |
+
+---
+
+## 🛠️ Tech Stack
+
+| Tool | Version | Purpose |
+|---|---|---|
+| Python | 3.x | Core programming language |
+| Pandas | 2.x | Data manipulation & cleaning |
+| NumPy | Latest | Numerical computing |
+| SQLite3 | Built-in | Database management & SQL queries |
+| Matplotlib | Latest | Chart creation & visualization |
+| Seaborn | Latest | Statistical visualizations |
+| Jupyter Notebook | Latest | Development environment |
+
+
+---
+
+## 💡 Business Recommendations
+
+| # | Recommendation | Priority | Target |
+|---|---|---|---|
+| 01 | Convert Monthly → Annual subscribers (offer 2 months free) | 🔴 HIGH | Retention Team |
+| 02 | Basic Plan retention campaign (trial premium upgrade) | 🔴 HIGH | Product Team |
+| 03 | Complaint early warning system (CSAT < 3 → auto escalate) | 🚨 CRITICAL | Support Team |
+| 04 | Age 41-50 targeted content strategy (family + regional) | 🟡 MEDIUM | Content Team |
+| 05 | Loyalty discount program (15-20% after 12 months) | 🟡 MEDIUM | Pricing Team |
+
+---
+
+## 🚀 How to Run This Project
+
+### Prerequisites
+```bash
+pip install pandas numpy matplotlib seaborn openpyxl jupyter
+```
+
+### Steps
+```bash
+# Step 1: Clone the repository
+git clone https://github.com/girishpathakk/OTT-Subscriber-Churn-Analysis.git
+# Step 2: Navigate to project folder
+cd ott-subscriber-churn-analysis
+
+# Step 3: Run Phase 1 - Data Pipeline
+jupyter notebook 03_Notebooks/phase1_data_pipeline.ipynb
+
+# Step 4: Run Phase 2 - EDA & Visualization
+jupyter notebook 03_Notebooks/phase2_eda_visualization.ipynb
+```
+
+> **Note:** Run Phase 1 first — it creates the SQLite database that Phase 2 reads from.
+
+---
+
+## 🎓 Skills Demonstrated
+
+- ✅ End-to-end data pipeline: Excel → Python → SQLite → Insights
+- ✅ Multi-table relational data management & SQL joins
+- ✅ Data cleaning: null handling, encoding, typo fixing, standardization
+- ✅ Advanced feature engineering (8 business features)
+- ✅ Exploratory Data Analysis — 6 business questions answered
+- ✅ Professional data visualization with business context
+- ✅ Executive-level reporting & storytelling
+- ✅ Translating technical findings into actionable business strategies
+
+---
 ## 👤 Author
 
 **Girish Pathak**
-- LinkedIn: https://linkedin.com/in/girishpathakk
-- GitHub: https://github.com/girishpathakk
-- Email: girish.pathak.ds@gmail.com
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/girishpathakk)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=flat&logo=github)](https://github.com/girishpathakk)
+[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=flat&logo=gmail)](mailto:girish.pathak.ds@gmail.com)
 
 ---
 
-*This project is applicable to OTT, SaaS, Fintech, 
-Telecom, and E-commerce industries.*
+
+
+<div align="left">
+
+**⭐ If you found this project useful, please give it a star!**
+
+*This project demonstrates real-world Data Analyst skills applicable to*  
+*OTT · SaaS · Fintech · Telecom · E-Commerce · AdTech industries*
+
+</div>
